@@ -1,7 +1,7 @@
 import React from "react";
 import profileImg from "./images/profile-img.png";
 import bigShare from "./images/big-share-button.png";
-import smallShare from "./images/Icon.png";
+import smallShare from "./images/small-share-button.png";
 import footerImg from "./images/Footer.png";
 import zuriLogo from "./images/Vector.png";
 import i4g from "./images/I4G.png";
@@ -17,33 +17,33 @@ const Home = () => {
         <img src={profileImg} alt="" id="profile-img" />
         <h4 className="profile-name">Annette Black</h4>
         <div className="btn-container">
-          <Link to="https://twitter.com/codexive_zech" className="btn">
+          <a href="https://twitter.com/codexive_zech" className="btn">
             Twitter Link
-          </Link>
-          <Link to="https://training.zuri.team" id="btn__zuri" className="btn">
+          </a>
+          <a href="https://training.zuri.team" id="btn__zuri" className="btn">
             Zuri Team
-          </Link>
-          <Link to="https://books.zuri.team" id="books" className="btn">
+          </a>
+          <a href="https://books.zuri.team" id="books" className="btn">
             Zuri Books
-          </Link>
-          <Link
-            to="https://books.zuri.team/python-for-beginners"
+          </a>
+          <a
+            href="https://books.zuri.team/python-for-beginners"
             ref_id="zech"
             id="python__book"
             className="btn"
           >
             Python Books
-          </Link>
-          <Link to="https://background.zuri.team" className="btn" id="pitch">
+          </a>
+          <a href="https://background.zuri.team" className="btn" id="pitch">
             Background Check for Coders
-          </Link>
-          <Link
-            to="https://books.zuri.team/design-rule"
+          </a>
+          <a
+            href="https://books.zuri.team/design-rule"
             className="btn"
             id="book__design"
           >
             Design Books
-          </Link>
+          </a>
         </div>
         <img src={footerImg} alt="" className="footer-img" />
       </main>
