@@ -1,13 +1,121 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 85vw;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+main {
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+}
+
+.share-container {
+  position: relative;
+}
+
+.big-share {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 10%;
+  margin-top: -2rem;
+}
+
+.small-share {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 10%;
+  margin-top: -2rem;
+}
+
+@media screen and (min-width: 765px) {
+  .big-share {
+    right: 15rem;
+    width: 3%;
+  }
+
+  .small-share {
+    right: 17rem;
+    width: 3%;
+  }
+}
+
+#profile-img {
+  width: 20vw;
+}
+
+@media screen and (min-width: 765px) {
+  #profile-img {
+    width: 5vw;
+  }
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+
+.btn-container {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: aliceblue;
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+}
+
+.footer-img {
+  margin-top: 1rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 765px) {
+  .footer-img {
+    width: 35%;
+  }
+}
+
+footer {
+  display: grid;
+  place-items: center;
+}
+
+footer img {
+  width: 45%;
+  height: 80%;
+}
+
+@media screen and (min-width: 765px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer img {
+    width: 10%;
+    height: 20%;
+  }
+  footer p {
+    margin-top: 0.5rem;
+  }
 }
