@@ -1,5 +1,5 @@
 import React from "react";
-import profileImg from "./images/profile-img.png";
+import profileImg from "./images/self.jpg";
 import bigShare from "./images/big-share-button.png";
 import smallShare from "./images/small-share-button.png";
 import footerImg from "./images/Footer.png";
@@ -15,7 +15,7 @@ const Home = () => {
       </div>
       <main>
         <img src={profileImg} alt="" id="profile-img" />
-        <h4 className="profile-name">Annette Black</h4>
+        <h4 className="profile-name">Zechariah Hounwanou</h4>
         <div className="btn-container">
           <a href="https://twitter.com/codexive_zech" className="btn">
             Twitter Link
