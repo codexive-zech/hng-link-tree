@@ -5,7 +5,7 @@ import smallShare from "./images/small-share-button.png";
 import footerImg from "./images/Footer.png";
 import zuriLogo from "./images/Vector.png";
 import i4g from "./images/I4G.png";
-import { Link } from "react-router-dom";
+import links from "./linkdata/links";
 const Home = () => {
   return (
     <>
@@ -15,34 +15,19 @@ const Home = () => {
       </div>
       <main>
         <img src={profileImg} alt="" id="profile-img" />
-        <h4 className="profile-name">Zechariah Hounwanou</h4>
+        <h4 id="twitter">@ codexive-zech</h4>
+        <p id="slack">ZechariahH</p>
         <div className="btn-container">
-          <a href="https://twitter.com/codexive_zech" className="btn">
-            Twitter Link
-          </a>
-          <a href="https://training.zuri.team" id="btn__zuri" className="btn">
-            Zuri Team
-          </a>
-          <a href="https://books.zuri.team" id="books" className="btn">
-            Zuri Books
-          </a>
-          <a
-            href="https://books.zuri.team/python-for-beginners?ref_id=Zechariah Hounwanou"
-            id="python__book"
-            className="btn"
-          >
-            Python Books
-          </a>
-          <a href="https://background.zuri.team" className="btn" id="pitch">
-            Background Check for Coders
-          </a>
-          <a
-            href="https://books.zuri.team/design-rule"
-            className="btn"
-            id="book__design"
-          >
-            Design Books
-          </a>
+          {links.map((link) => {
+            const { id, title, path, btnId, subText } = link;
+            return (
+              <sub className="tooltip btn" data-tooltip={subText} key={id}>
+                <a href={path} id={btnId}>
+                  {title}
+                </a>
+              </sub>
+            );
+          })}
         </div>
         <img src={footerImg} alt="" className="footer-img" />
       </main>

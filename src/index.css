@@ -14,11 +14,16 @@ img {
 }
 a {
   text-decoration: none;
+  color: #101828;
 }
 main {
   display: grid;
   place-items: center;
   margin-top: 3rem;
+}
+
+#slack {
+  display: none;
 }
 
 .share-container {
@@ -63,7 +68,7 @@ main {
   }
 }
 
-.profile-name {
+#twitter {
   font-weight: bold;
   letter-spacing: 3px;
   font-style: normal;
@@ -74,7 +79,7 @@ main {
 }
 
 @media screen and (min-width: 765px) {
-  .profile-name {
+  #twitter {
     font-size: 20px;
     line-height: 30px;
   }
@@ -87,7 +92,6 @@ main {
 }
 
 .btn {
-  background-color: aliceblue;
   width: 80vw;
   margin: 0 auto;
   text-align: center;
@@ -101,6 +105,10 @@ main {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+}
+
+.btn:hover {
+  background-color: #7c8391;
 }
 
 @media screen and (min-width: 765px) {
@@ -160,4 +168,46 @@ footer p {
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 20px;
+  color: #000;
+}
+
+.tooltip::after {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  background: rgba(234, 236, 240, 0.5);
+  width: 20vw;
+  height: 26vh;
+  font-size: 1rem;
+  font-weight: 300;
+  top: -75;
+  left: -10;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+}
+
+@media screen and (min-width: 765px) {
+  .tooltip::after {
+    width: 20vw;
+    height: 13vh;
+  }
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  transform: translateY(-35px);
 }
